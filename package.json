@@ -1,0 +1,21 @@
+{
+  "name": "mutable-number",
+  "version": "0.0.1",
+  "description": "This repository is a template of the npm package.",
+  "main": "dist/mutable-number.js",
+  "scripts": {
+    "preversion": "npm test",
+    "version": "npm run build && gulp && git add -A",
+    "postversion": "git push && git push --tags",
+    "pretest": "npm run build",
+    "test": "mocha -R spec",
+    "build": "rollup src/main.js -c -o dist/mutable-number.js --name Mutable-number"
+  },
+  "keywords": [],
+  "author": "Naoto Ikuno <moon_in_france@yahoo.co.jp>",
+  "license": "MIT",
+  "devDependencies": {
+    "mocha": "4.1.0",
+    "rollup": "0.53.1"
+  }
+}
